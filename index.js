@@ -7,18 +7,23 @@ let employee = {
 function updateEmployeeWithKeyAndValue(employee, key, value){
     let newEmployee = {...employee}
     newEmployee[key] = value
-    return newEmployee, employee
+    return newEmployee
 }
 
 function destructivelyUpdateEmployeeWithKeyAndValue(employee, key, value){
     employee[key] = value
+    return employee
 }
 
 function deleteFromEmployeeByKey(employee, key){
     let newEmployee = {...employee}
-    delete newEmployee.key
+    delete newEmployee.name
+    return newEmployee
 }
 
 function destructivelyDeleteFromEmployeeByKey(employee, key){
-    delete employee.key
+    let newEmployee = {...employee}
+    delete employee.name
+    delete newEmployee.name
+    return employee
 }
